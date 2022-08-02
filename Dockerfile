@@ -1,6 +1,6 @@
 FROM maven:3.5.2-jdk-8-alpine AS MAVEN_BUILD
 
-MAINTAINER Brian Hannaway
+MAINTAINER Sunil Kumar
 
 COPY pom.xml /build/
 COPY src /build/src/
@@ -14,4 +14,4 @@ WORKDIR /app
 
 COPY --from=MAVEN_BUILD /build/target/docker-boot-intro-0.1.0.jar /app/
 
-ENTRYPOINT ["java", "-jar", "docker-boot-intro-0.1.0.jar"]
+ENTRYPOINT ["java", "-jar", "spring-boot-docker-0.1.0.jar"]
